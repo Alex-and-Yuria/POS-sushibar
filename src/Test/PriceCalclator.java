@@ -2,9 +2,9 @@ package Test;
 
 import java.util.Scanner;
 
-public class PriceCalclator {
+public class PriceCalculator {
 
-    public void PriceCalclator() {
+    public void PriceCalculator() {
 
         // identifier
         double subtotal = 0, total, tax;
@@ -40,13 +40,13 @@ public class PriceCalclator {
         // calculate tax
         tax = taxRate * subtotal;
 
-        // caluclate total
+        // calculate total
         total = subtotal + tax;
 
         // output subtotal, tax and total
         System.out.println("--------------------");
         System.out.println("Subtotal: $" + subtotal);
-        System.out.println("GST(5%): $" + String.format("%.2f", tax));
+        System.out.println("GST(" + taxRate*100 + "%): $" + String.format("%.2f", tax));
         System.out.println("====================");
         System.out.println("Total: $" + String.format("%.2f", total));
     }
