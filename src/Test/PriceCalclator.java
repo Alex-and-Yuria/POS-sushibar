@@ -13,15 +13,19 @@ public class PriceCalclator {
         // scanner
         Scanner in = new Scanner(System.in);
 
+        // item name array
+        String [] n = {"California Roll","Kappa Maki","Tekka Maki", "Tamago", "Salmon Nigiri", "Avocado Roll"};
+
         // price array
         double[] p = {2.25, 2.50, 3.25, 2.25, 2.25, 2.25};
+
 
         // make quantity array
         double[] q = new double[6];
 
         // ask quantities and store in array q
         for (int i = 0; i < q.length; i++) {
-            System.out.println("How many item" + (i + 1) + "?");
+            System.out.println((i+1) + ". How many " + n[i] + "?");
             q[i] = in.nextInt();
         }
 
@@ -29,7 +33,7 @@ public class PriceCalclator {
 
         // output each item and caluclate subtotal
         for (int i = 0; i < q.length; i++) {
-            System.out.println("item" + (i + 1) + ": $" + q[i] * p[i]);
+            System.out.println(n[i] + ": $" + q[i] * p[i]);
             subtotal += q[i] * p[i];
         }
 
