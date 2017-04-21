@@ -19,6 +19,10 @@ public class Basic extends Menu { // subclass from menu with basic calculate met
 
     public static String[] n = new String[10];  // string that stores names of sushi meals.
 
+
+
+
+
     public Basic(String name, int order) { // constructor just with 
         //data that we use in Menu class, we dont add anything.
         super(name, order);
@@ -29,7 +33,8 @@ public class Basic extends Menu { // subclass from menu with basic calculate met
 
     @Override // we override method from our interface
     public double calculate_price() {
-        double total = 0; // total price of the order 
+
+        double total = 0;
         double tax = 0; // GST tax
         Scanner in = new Scanner(System.in);
         double[] p = {2.25, 2.50, 3.25, 2.25, 4.25, 2.99, 7.99, 1.99, 5.79, 6.19};
@@ -46,13 +51,13 @@ public class Basic extends Menu { // subclass from menu with basic calculate met
         }
 
         for (int i = 0; i < q.length; i++) {
-            // System.out.println("The quantity of " + n[i] + ": "+ q[i]);
+            System.out.println(n[i] + ": " +  q[i] + " -> $" + q[i]*p[i]);
             total += q[i] * p[i];
             tax = total * 0.05;
 
         }
 
-        System.out.println("\n[RECEIPT & TAX] \nGST: " + df.format(tax) + " \nYour total price is: " + df.format(total));
+        System.out.println("--------------------\n[RECEIPT & TAX] \nGST: $" + df.format(tax) + " \nYour total price is: $" + df.format(total));
         return total;
 
     }
@@ -66,24 +71,26 @@ public class Basic extends Menu { // subclass from menu with basic calculate met
         return total_special;
     }
 
-    public double Delivery(double total) {  // method to calculate the distance and possible delivery charge if we choose delivery option
+    public double delivery(double total) {  // method to calculate the distance and possible delivery charge if we choose delivery option
         Scanner delivery = new Scanner(System.in);
 
         System.out.println("\n[DELIVERY OPTION]\nIf this is delivery, press 1.");
         int input = delivery.nextInt();
 
         if (input == 1) {
-            System.out.println("What's the distance to the restaurant?");
+            System.out.println("What's the distance to the restaurant? (km)");
             double distance = delivery.nextDouble();
             double charge = 0;
             if (distance <= 4.5) {
                 System.out.println("Delivery is free");
             } else if (distance > 4.5 && distance <= 6) {
-                System.out.println("Delivery charge is +$5");
                 charge = total + 5;
+                System.out.println("Delivery charge is +$5 -> your total price is now $" + charge);
+
             } else if (distance > 6 && distance <= 10) {
-                System.out.println("Delivery charge is +$10");
                 charge = total + 10;
+                System.out.println("Delivery charge is +$10 -> your total price is now $" + charge);
+
             } else {
                 System.out.println("I'm sorry, we don\'t deliver more than 10 km.");
             }
@@ -93,7 +100,7 @@ public class Basic extends Menu { // subclass from menu with basic calculate met
             if (answer == 1) {
                 System.out.println("What is the amount of cash?");
                 double bill = delivery.nextDouble();
-                double change = 0;
+                double change;
                 change = bill - total;
                 System.out.println("Your change is: " + df.format(change));
             } else {
@@ -102,6 +109,11 @@ public class Basic extends Menu { // subclass from menu with basic calculate met
         }
         return total;
 
+
     }
 
-}
+
+    }
+
+
+

@@ -14,7 +14,6 @@ import java.util.Scanner;
 public class Kitchen {
 
     int key = 3344;
-    boolean staff = true;
     Scanner input = new Scanner(System.in);
 
     public boolean ifKitchen() {
