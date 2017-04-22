@@ -10,7 +10,7 @@ import java.util.Scanner;
 /**
  * @author aleksandrakorolczuk1
  */
-public class Order {
+public class Main {
 
     public static void main(String[] args) {
         while (true) {
