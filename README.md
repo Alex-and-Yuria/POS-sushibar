@@ -15,6 +15,6 @@ For Staff
 - Calculate the taking of a day
 
 ### Mockup:
-
+![UI_Design](https://raw.githubusercontent.com/Alex-and-Yuria/POS-sushibar/master/_images/UI_shushibar.png "UI Design")
 
 ### UML:
