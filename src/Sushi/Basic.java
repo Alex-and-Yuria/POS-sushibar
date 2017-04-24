@@ -19,11 +19,7 @@ public class Basic extends Menu { // subclass from menu with basic calculate met
 
     public static String[] n = new String[10];  // string that stores names of sushi meals.
 
-
-
-
-
-    public Basic(String name, int order) { // constructor just with 
+    public Basic(String name, int order) { // constructor just with
         //data that we use in Menu class, we dont add anything.
         super(name, order);
 
