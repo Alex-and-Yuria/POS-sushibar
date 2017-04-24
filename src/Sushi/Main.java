@@ -25,7 +25,7 @@ public class Main {
             String input = scan.nextLine();
 
             if (!key_word.matches(input)) {
-                Basic b1 = new Basic("Name of the customer: Daniel", 2254);
+                Basic b1 = new Basic();
                 b1.delivery(b1.calculate_special(b1.calculate_price()));
                 Kitchen k1 = new Kitchen();
 
