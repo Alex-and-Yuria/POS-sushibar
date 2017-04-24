@@ -9,7 +9,7 @@ package Sushi;
  *
  * @author aleksandrakorolczuk1
  */
-public interface Sushi {  //our basic interface that contains basic method.
+public interface Cashier {  //our basic interface that contains basic method.
 
     double calculate_price();
 

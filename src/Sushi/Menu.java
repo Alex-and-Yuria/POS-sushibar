@@ -9,7 +9,7 @@ package Sushi;
  *
  * @author aleksandrakorolczuk1
  */
-public abstract class Menu implements Sushi { /// abstract class, we cant create objects from abstract class.
+public abstract class Menu implements Cashier { /// abstract class, we cant create objects from abstract class.
 
     String name; // basic data we use in our program: name of the
     int order;
