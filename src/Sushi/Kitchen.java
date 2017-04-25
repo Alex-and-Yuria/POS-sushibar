@@ -54,13 +54,13 @@ public class Kitchen {
 
             for (int i = 0; i < 10; i++) {
 
-                String n = Basic.n[i];
-                int q = Basic.q[i];
+                String n = Calc.n[i];
+                int q = Calc.q[i];
 
-                q_nori += nori[i] * Basic.q[i];
-                q_avocado += avocado[i] * Basic.q[i];
-                q_fish += fish[i] * Basic.q[i];
-                q_rice += rice[i] * Basic.q[i];
+                q_nori += nori[i] * Calc.q[i];
+                q_avocado += avocado[i] * Calc.q[i];
+                q_fish += fish[i] * Calc.q[i];
+                q_rice += rice[i] * Calc.q[i];
             }
             System.out.println("nori: " + q_nori + "\navocado: " + q_avocado + "\nfish: " + q_fish + "\nrice: " + q_rice);
         }
