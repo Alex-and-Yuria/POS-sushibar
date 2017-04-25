@@ -6,7 +6,7 @@ public class Food {
     protected double price;
 
     // Basic food information
-    public Food(String itemName, int itemPrice) {
+    public Food(String itemName, double itemPrice) {
         name = itemName;
         price = itemPrice;
     }
@@ -17,7 +17,7 @@ public class Food {
     }
 
     // Set food's price
-    public void setNumber(int itemPrice) {
+    public void setNumber(double itemPrice) {
         price = itemPrice;
     }
 
